@@ -1,0 +1,1834 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Quadrum\n"
+"POT-Creation-Date: 2017-02-01 19:49+0200\n"
+"PO-Revision-Date: 2017-02-01 19:49+0200\n"
+"Last-Translator: Orange Themes <support@orange-themes.com>\n"
+"Language-Team: Orange Themes <support@orange-themes.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;esc_html__;esc_html_e;"
+"esc_attr__;esc_attr_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ./..\n"
+
+#: ../404.php:24
+msgid "Error 404"
+msgstr ""
+
+#: ../404.php:26
+msgid "Page Not Found"
+msgstr ""
+
+#: ../404.php:29
+msgid ""
+"Sorry, This page is wanted by the police so it ran<br/>away to Antarctica. "
+"If You see it, please let us know."
+msgstr ""
+
+#: ../404.php:31
+msgid "back to homepage"
+msgstr ""
+
+#: ../comments.php:6
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: ../comments.php:22
+msgid "No comments"
+msgstr ""
+
+#: ../comments.php:23
+msgid "1 comment"
+msgstr ""
+
+#: ../comments.php:24
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: ../comments.php:26
+msgid "Write a comment"
+msgstr ""
+
+#: ../comments.php:49
+msgid "No Comments Yet!"
+msgstr ""
+
+#: ../comments.php:51
+msgid "You can be first to <a href=\"#respond\">comment this post!</a>"
+msgstr ""
+
+#: ../comments.php:70
+#, php-format
+msgid "Only <a href=\"%1$s\"> registered </a> users can comment."
+msgstr ""
+
+#: ../comments.php:76
+msgid "Write a Comment"
+msgstr ""
+
+#: ../comments.php:86
+msgid "Comment"
+msgstr ""
+
+#: ../comments.php:87
+msgid "Your message.."
+msgstr ""
+
+#: ../comments.php:96
+msgid "Post a Comment"
+msgstr ""
+
+#: ../footer.php:86 ../functions/register.php:17
+msgid "Footer Menu"
+msgstr ""
+
+#: ../footer.php:100
+msgid "Designed by"
+msgstr ""
+
+#: ../footer.php:116 ../includes/_lightbox-gallery.php:3
+msgid "Close Window"
+msgstr ""
+
+#: ../footer.php:119
+msgid "Loading, Please Wait!"
+msgstr ""
+
+#: ../footer.php:121
+msgid "This may take a second or two."
+msgstr ""
+
+#: ../footer.php:123 ../footer.php:124
+msgid "Loading"
+msgstr ""
+
+#: ../header.php:31
+#, php-format
+msgid "%s latest posts"
+msgstr ""
+
+#: ../header.php:32
+#, php-format
+msgid "%s latest comments"
+msgstr ""
+
+#: ../searchform.php:7
+msgid "Search for:"
+msgstr ""
+
+#: ../searchform.php:9
+msgid "search here"
+msgstr ""
+
+#: ../searchform.php:11
+msgid "Search"
+msgstr ""
+
+#: ../template-contact.php:34
+msgid "Success!"
+msgstr ""
+
+#: ../template-contact.php:43 ../template-contact.php:44
+#: ../functions/filters.php:217
+msgid "Nickname"
+msgstr ""
+
+#: ../template-contact.php:48 ../template-contact.php:49
+#: ../functions/filters.php:220 ../functions/quadrum-menu.php:114
+msgid "E-mail"
+msgstr ""
+
+#: ../template-contact.php:49
+msgid "E-mail address"
+msgstr ""
+
+#: ../template-contact.php:53 ../template-contact.php:54
+msgid "Your message"
+msgstr ""
+
+#: ../template-contact.php:58
+msgid "Send a Message"
+msgstr ""
+
+#: ../template-contact.php:70 ../includes/gallery-single-style-1.php:122
+#: ../includes/gallery-single-style-1.php:134 ../includes/news-single.php:89
+#: ../includes/page-single.php:19 ../includes/page-woocommerce.php:10
+msgid "Sorry, no posts matched your criteria."
+msgstr ""
+
+#: ../template-gallery.php:50
+msgid "All Categories"
+msgstr ""
+
+#: ../template-gallery.php:116
+msgid "No galleries were found"
+msgstr ""
+
+#: ../functions/ajax.php:300
+msgid "From"
+msgstr ""
+
+#: ../functions/ajax.php:301
+msgid "Contact Page"
+msgstr ""
+
+#: ../functions/ajax.php:315
+msgid "Message:"
+msgstr ""
+
+#: ../functions/ajax.php:318
+msgid "Name:"
+msgstr ""
+
+#: ../functions/ajax.php:320
+msgid "E-mail:"
+msgstr ""
+
+#: ../functions/ajax.php:322
+msgid "IP Address:"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:124
+#, php-format
+msgid "%s (Invalid)"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:129
+#, php-format
+msgid "%s (Pending)"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:154
+msgid "Move up"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:167
+msgid "Move down"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:169
+#: ../functions/custom-admin-menu.php:171
+msgid "Edit Menu Item"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:181 ../functions/quadrum-menu.php:115
+msgid "URL"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:189
+msgid "Navigation Label"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:196
+msgid "Title Attribute"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:204
+msgid "Open link in a new window/tab"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:210
+msgid "CSS Classes (optional)"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:217
+msgid "Link Relationship (XFN)"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:224
+msgid "Description"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:227
+msgid ""
+"The description will be displayed in the menu if the current theme supports "
+"it."
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:240
+msgid "Show The Color Line In Main Menu Parent Item (Only Pages/Categories)"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:246
+msgid "Main Menu Type ( Only Menu Parent Item )"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:257
+msgid ""
+"Menu Icon (in default menu it will show up next to the section title, in "
+"mega menu with colums it will be as background)"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:278
+#, php-format
+msgid "Original: %s"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:292
+#: ../functions/tax-meta-class/tax-meta-class.php:583
+#: ../functions/tax-meta-class/tax-meta-class.php:630
+msgid "Remove"
+msgstr ""
+
+#: ../functions/custom-admin-menu.php:294
+msgid "Cancel"
+msgstr ""
+
+#: ../functions/drag-drop.php:13
+msgid "Homepage Blocks:"
+msgstr ""
+
+#: ../functions/drag-drop.php:18
+#: ../includes/widgets/widget-quadrum-latest-posts.php:41
+#: ../includes/widgets/widget-quadrum-popular-posts.php:41
+msgid "Latest News"
+msgstr ""
+
+#: ../functions/drag-drop.php:22 ../functions/drag-drop.php:68
+#: ../functions/drag-drop.php:115 ../functions/drag-drop.php:155
+#: ../functions/drag-drop.php:177 ../functions/drag-drop.php:199
+#: ../functions/drag-drop.php:254 ../functions/drag-drop.php:310
+#: ../functions/drag-drop.php:340 ../functions/drag-drop.php:370
+#: ../functions/drag-drop.php:438 ../functions/drag-drop.php:480
+#: ../functions/drag-drop.php:500 ../includes/widgets/widget-ad160x250.php:115
+#: ../includes/widgets/widget-ad300x250.php:116
+#: ../includes/widgets/widget-quadrum-comments.php:22
+#: ../includes/widgets/widget-quadrum-contact.php:35
+#: ../includes/widgets/widget-quadrum-latest-posts.php:25
+#: ../includes/widgets/widget-quadrum-popular-posts.php:25
+msgid "Title:"
+msgstr ""
+
+#: ../functions/drag-drop.php:24 ../functions/drag-drop.php:70
+#: ../functions/drag-drop.php:117 ../functions/drag-drop.php:157
+#: ../functions/drag-drop.php:179 ../functions/drag-drop.php:201
+#: ../functions/drag-drop.php:256 ../functions/drag-drop.php:312
+#: ../functions/drag-drop.php:342 ../functions/drag-drop.php:372
+#: ../functions/drag-drop.php:440 ../functions/drag-drop.php:482
+msgid "Count:"
+msgstr ""
+
+#: ../functions/drag-drop.php:33 ../functions/drag-drop.php:79
+#: ../functions/drag-drop.php:166 ../functions/drag-drop.php:188
+#: ../functions/drag-drop.php:210 ../functions/drag-drop.php:265
+#: ../functions/drag-drop.php:321 ../functions/drag-drop.php:351
+#: ../functions/drag-drop.php:381 ../functions/drag-drop.php:449
+#: ../functions/drag-drop.php:491
+msgid ""
+"From which post should start the loop (for example 4 ), for default leave it "
+"empty, or add 0. (Offset):"
+msgstr ""
+
+#: ../functions/drag-drop.php:37 ../functions/drag-drop.php:83
+#: ../functions/drag-drop.php:128 ../functions/drag-drop.php:214
+#: ../functions/drag-drop.php:269 ../functions/drag-drop.php:385
+#: ../functions/drag-drop.php:453
+msgid "Columns:"
+msgstr ""
+
+#: ../functions/drag-drop.php:41 ../functions/drag-drop.php:87
+#: ../functions/drag-drop.php:132 ../functions/drag-drop.php:218
+#: ../functions/drag-drop.php:273 ../functions/drag-drop.php:389
+#: ../functions/drag-drop.php:457
+msgid "3 Blocks in Row"
+msgstr ""
+
+#: ../functions/drag-drop.php:43 ../functions/drag-drop.php:89
+#: ../functions/drag-drop.php:134 ../functions/drag-drop.php:220
+#: ../functions/drag-drop.php:275 ../functions/drag-drop.php:391
+#: ../functions/drag-drop.php:459
+msgid "4 Blocks in Row"
+msgstr ""
+
+#: ../functions/drag-drop.php:50 ../functions/drag-drop.php:227
+#: ../functions/drag-drop.php:411
+msgid "Show Images:"
+msgstr ""
+
+#: ../functions/drag-drop.php:54 ../functions/drag-drop.php:100
+#: ../functions/drag-drop.php:231 ../functions/drag-drop.php:286
+#: ../functions/drag-drop.php:415
+msgid "Yes"
+msgstr ""
+
+#: ../functions/drag-drop.php:56 ../functions/drag-drop.php:102
+#: ../functions/drag-drop.php:233 ../functions/drag-drop.php:288
+#: ../functions/drag-drop.php:417
+msgid "No"
+msgstr ""
+
+#: ../functions/drag-drop.php:64
+msgid "Latest News Style 2"
+msgstr ""
+
+#: ../functions/drag-drop.php:96 ../functions/drag-drop.php:282
+msgid "Show Excerpt:"
+msgstr ""
+
+#: ../functions/drag-drop.php:111
+msgid "Category News"
+msgstr ""
+
+#: ../functions/drag-drop.php:142 ../functions/drag-drop.php:242
+#: ../functions/drag-drop.php:296 ../functions/drag-drop.php:327
+#: ../functions/drag-drop.php:357 ../functions/drag-drop.php:426
+#: ../functions/drag-drop.php:468 ../includes/admin/style.php:79
+#: ../includes/admin/style.php:157
+msgid "Color:"
+msgstr ""
+
+#: ../functions/drag-drop.php:151
+msgid "Latest News Style 3"
+msgstr ""
+
+#: ../functions/drag-drop.php:173
+msgid "Latest News Style 4"
+msgstr ""
+
+#: ../functions/drag-drop.php:195
+msgid "Popular News"
+msgstr ""
+
+#: ../functions/drag-drop.php:250
+msgid "Popular News Style 2"
+msgstr ""
+
+#: ../functions/drag-drop.php:306
+msgid "Popular News Style 3"
+msgstr ""
+
+#: ../functions/drag-drop.php:336
+msgid "Popular News Style 4"
+msgstr ""
+
+#: ../functions/drag-drop.php:366
+msgid "Reviews"
+msgstr ""
+
+#: ../functions/drag-drop.php:398
+msgid "Type:"
+msgstr ""
+
+#: ../functions/drag-drop.php:402
+msgid "Latest Reviews"
+msgstr ""
+
+#: ../functions/drag-drop.php:404
+msgid "Top Reviews"
+msgstr ""
+
+#: ../functions/drag-drop.php:434
+msgid "Shop"
+msgstr ""
+
+#: ../functions/drag-drop.php:476
+msgid "Latest Video Block"
+msgstr ""
+
+#: ../functions/drag-drop.php:502 ../functions/drag-drop.php:510
+msgid "HTML Code:"
+msgstr ""
+
+#: ../functions/filters.php:218
+msgid "Nickname.."
+msgstr ""
+
+#: ../functions/filters.php:221
+msgid "E-mail.."
+msgstr ""
+
+#: ../functions/filters.php:223
+msgid "Website"
+msgstr ""
+
+#: ../functions/filters.php:224
+msgid "Website.."
+msgstr ""
+
+#: ../functions/filters.php:235
+msgid "Your e-mail address will not be published."
+msgstr ""
+
+#: ../functions/filters.php:236
+msgid "Required fields are marked"
+msgstr ""
+
+#: ../functions/nav.php:95
+msgid "Previous"
+msgstr ""
+
+#: ../functions/other.php:57
+msgid "Category Breaking News Slider "
+msgstr ""
+
+#: ../functions/other.php:58
+msgid "Main Sidebar Position "
+msgstr ""
+
+#: ../functions/other.php:59
+msgid "Main Sidebar"
+msgstr ""
+
+#: ../functions/other.php:60
+msgid "Small Position "
+msgstr ""
+
+#: ../functions/other.php:61 ../functions/quadrum-menu.php:47
+#: ../functions/quadrum-menu.php:140 ../functions/quadrum-menu.php:152
+#: ../functions/quadrum-menu.php:163
+msgid "Small Sidebar"
+msgstr ""
+
+#: ../functions/other.php:63
+msgid "Custom"
+msgstr ""
+
+#: ../functions/other.php:63
+msgid "Small Images"
+msgstr ""
+
+#: ../functions/other.php:63
+msgid "Large Images"
+msgstr ""
+
+#: ../functions/other.php:63
+msgid "Category Style "
+msgstr ""
+
+#: ../functions/other.php:105
+msgid "Last Update: "
+msgstr ""
+
+#: ../functions/other.php:105
+msgid "Updated"
+msgstr ""
+
+#: ../functions/other.php:318 ../functions/other.php:378
+#: ../includes/widgets/widget-quadrum-latest-posts.php:143
+#: ../includes/widgets/widget-quadrum-popular-posts.php:140
+msgid "No posts where found"
+msgstr ""
+
+#: ../functions/other.php:323
+msgid "Please Insert A category"
+msgstr ""
+
+#: ../functions/other.php:1080 ../functions/other.php:1140
+msgid "Delete image"
+msgstr ""
+
+#: ../functions/other.php:1080 ../functions/other.php:1140
+#: ../functions/tax-meta-class/tax-meta-class.php:250
+#: ../functions/tax-meta-class/tax-meta-class.php:883
+msgid "Delete"
+msgstr ""
+
+#: ../functions/other.php:1091
+msgid "Add images"
+msgstr ""
+
+#: ../functions/other.php:1117
+msgid "Add Images to Product Gallery"
+msgstr ""
+
+#: ../functions/other.php:1119
+msgid "Add to gallery"
+msgstr ""
+
+#: ../functions/other.php:1391
+msgid "Moderate or heavy snow in area with thunder"
+msgstr ""
+
+#: ../functions/other.php:1395
+msgid "Patchy light snow in area with thunder"
+msgstr ""
+
+#: ../functions/other.php:1399
+msgid "Moderate or heavy snow showers"
+msgstr ""
+
+#: ../functions/other.php:1403
+msgid "Light snow showers"
+msgstr ""
+
+#: ../functions/other.php:1407
+msgid "Ice pellets"
+msgstr ""
+
+#: ../functions/other.php:1411
+msgid "Heavy snow"
+msgstr ""
+
+#: ../functions/other.php:1415
+msgid "Patchy heavy snow"
+msgstr ""
+
+#: ../functions/other.php:1419
+msgid "Moderate snow"
+msgstr ""
+
+#: ../functions/other.php:1423
+msgid "Patchy moderate snow"
+msgstr ""
+
+#: ../functions/other.php:1427
+msgid "Light snow"
+msgstr ""
+
+#: ../functions/other.php:1431
+msgid "Patchy light snow"
+msgstr ""
+
+#: ../functions/other.php:1435
+msgid "Moderate or heavy sleet"
+msgstr ""
+
+#: ../functions/other.php:1439
+msgid "Light sleet"
+msgstr ""
+
+#: ../functions/other.php:1443
+msgid "Heavy freezing drizzle"
+msgstr ""
+
+#: ../functions/other.php:1447
+msgid "Freezing drizzle"
+msgstr ""
+
+#: ../functions/other.php:1451
+msgid "Light drizzle"
+msgstr ""
+
+#: ../functions/other.php:1455
+msgid "Patchy light drizzle"
+msgstr ""
+
+#: ../functions/other.php:1459
+msgid "Blizzard"
+msgstr ""
+
+#: ../functions/other.php:1463
+msgid "Blowing snow"
+msgstr ""
+
+#: ../functions/other.php:1467
+msgid "Moderate or heavy rain in area with thunder"
+msgstr ""
+
+#: ../functions/other.php:1471
+msgid "Patchy light rain in area with thunder"
+msgstr ""
+
+#: ../functions/other.php:1475
+msgid "Thundery outbreaks in nearby"
+msgstr ""
+
+#: ../functions/other.php:1479
+msgid "Moderate or heavy showers of ice pellets"
+msgstr ""
+
+#: ../functions/other.php:1483
+msgid "Light showers of ice pellets"
+msgstr ""
+
+#: ../functions/other.php:1487
+msgid "Moderate or heavy sleet showers"
+msgstr ""
+
+#: ../functions/other.php:1491
+msgid "Light sleet showers"
+msgstr ""
+
+#: ../functions/other.php:1495
+msgid "Torrential rain shower"
+msgstr ""
+
+#: ../functions/other.php:1499
+msgid "Moderate or heavy rain shower"
+msgstr ""
+
+#: ../functions/other.php:1503
+msgid "Light rain shower"
+msgstr ""
+
+#: ../functions/other.php:1507
+msgid "Moderate or Heavy freezing rain"
+msgstr ""
+
+#: ../functions/other.php:1511
+msgid "Light freezing rain"
+msgstr ""
+
+#: ../functions/other.php:1515
+msgid "Heavy rain"
+msgstr ""
+
+#: ../functions/other.php:1519
+msgid "Heavy rain at times"
+msgstr ""
+
+#: ../functions/other.php:1523
+msgid "Moderate rain"
+msgstr ""
+
+#: ../functions/other.php:1527
+msgid "Moderate rain at times"
+msgstr ""
+
+#: ../functions/other.php:1531
+msgid "Light rain"
+msgstr ""
+
+#: ../functions/other.php:1535
+msgid "Patchy light rain"
+msgstr ""
+
+#: ../functions/other.php:1539
+msgid "Patchy freezing drizzle nearby"
+msgstr ""
+
+#: ../functions/other.php:1543
+msgid "Patchy snow nearby"
+msgstr ""
+
+#: ../functions/other.php:1547
+msgid "Patchy rain nearby"
+msgstr ""
+
+#: ../functions/other.php:1551
+msgid "Freezing fog"
+msgstr ""
+
+#: ../functions/other.php:1555
+msgid "Fog"
+msgstr ""
+
+#: ../functions/other.php:1559
+msgid "Mist"
+msgstr ""
+
+#: ../functions/other.php:1563
+msgid "Overcast"
+msgstr ""
+
+#: ../functions/other.php:1567
+msgid "Cloudy"
+msgstr ""
+
+#: ../functions/other.php:1571
+msgid "Partly Cloudy"
+msgstr ""
+
+#: ../functions/other.php:1575
+msgid "Sunny"
+msgstr ""
+
+#: ../functions/other.php:1579
+msgid "Patchy sleet nearby"
+msgstr ""
+
+#: ../functions/other.php:1583
+msgid "Can't get any data."
+msgstr ""
+
+#: ../functions/other.php:1595 ../functions/other.php:1607
+msgid "Something went wrong with the connection!"
+msgstr ""
+
+#: ../functions/other.php:1610
+msgid "This option doesn't work on localhost!"
+msgstr ""
+
+#: ../functions/other.php:1614
+msgid "Please set up your API key!"
+msgstr ""
+
+#: ../functions/other.php:1639
+msgid "Search Results for"
+msgstr ""
+
+#: ../functions/other.php:1647
+msgid "Posts From"
+msgstr ""
+
+#: ../functions/other.php:1650
+msgid "Tag"
+msgstr ""
+
+#: ../functions/other.php:1658
+msgid "Archive"
+msgstr ""
+
+#: ../functions/other.php:1665
+msgid "Blog"
+msgstr ""
+
+#: ../functions/other.php:2247
+msgid "Author"
+msgstr ""
+
+#: ../functions/other.php:2250
+#, php-format
+msgid " %1$s, %2$s"
+msgstr ""
+
+#: ../functions/other.php:2253
+msgid "Reply this comment"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:38
+msgid "Latest News Block (Style 2)"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:38
+msgid "Background Image:"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:39
+msgid "Show Print Button"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:39 ../includes/admin/general.php:117
+#: ../includes/admin/general.php:159
+msgid "Show:"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:40
+msgid "Breaking Slider News"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:40
+msgid "Show this news in the breaking news slider?"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:41 ../functions/quadrum-menu.php:57
+msgid "Show Breaking Slider?"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:41 ../functions/quadrum-menu.php:57
+msgid "Breaking Slider Category"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:44 ../functions/quadrum-menu.php:60
+msgid "Banner Code"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:44 ../functions/quadrum-menu.php:60
+#: ../includes/admin/general.php:630 ../includes/admin/general.php:662
+msgid "Banner HTML Code"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:45
+msgid " YouTube Video URL:"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:45
+msgid "URL:"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:48 ../functions/quadrum-menu.php:141
+#: ../functions/quadrum-menu.php:153 ../functions/quadrum-menu.php:164
+msgid "Small Sidebar Position"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:63
+msgid "Gallery Images"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:86
+msgid " Ratings"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:86
+msgid ""
+"Enter the ratings like this - <b>Graphics:5; Gameplay:4,5; <br>Sound:3; "
+"Storyline:4</b>"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:87
+msgid " Summary"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:87
+msgid "Summary:"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:114
+msgid "Contactform E-mail"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:115
+msgid "Google Map"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:182
+msgid "Post Count"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:182
+msgid "Count"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:187
+msgid "Show Layer Slider"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:188
+msgid "Layer Slider"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:333
+msgid "Off"
+msgstr ""
+
+#: ../functions/quadrum-menu.php:374
+msgid "You didn\\'t create a slider yet."
+msgstr ""
+
+#: ../functions/register.php:14 ../includes/top.php:59
+msgid "Top Menu"
+msgstr ""
+
+#: ../functions/register.php:15 ../includes/top.php:172
+#: ../includes/top.php:183 ../includes/admin/style.php:285
+msgid "Main Menu"
+msgstr ""
+
+#: ../functions/register.php:16 ../includes/top.php:199
+msgid "Secondary Menu"
+msgstr ""
+
+#: ../functions/register.php:42
+msgid "The default page sidebar."
+msgstr ""
+
+#: ../functions/register.php:43
+msgid "Footer widget area, supports up to 3 widgets."
+msgstr ""
+
+#: ../functions/register.php:44
+msgid "Woocommerce Page Sidebar"
+msgstr ""
+
+#: ../functions/register.php:45
+msgid "bbPress Page Sidebar"
+msgstr ""
+
+#: ../functions/register.php:46
+msgid "BuddyPress Page Sidebar"
+msgstr ""
+
+#: ../functions/tax-meta-class/tax-meta-class.php:250
+msgid "Delete this image"
+msgstr ""
+
+#: ../functions/tax-meta-class/tax-meta-class.php:357
+msgid "Cannot delete file. Something's wrong."
+msgstr ""
+
+#: ../functions/tax-meta-class/tax-meta-class.php:596
+msgid "Add"
+msgstr ""
+
+#: ../functions/tax-meta-class/tax-meta-class.php:879
+msgid "Uploaded files"
+msgstr ""
+
+#: ../functions/tax-meta-class/tax-meta-class.php:890
+msgid "Upload new files"
+msgstr ""
+
+#: ../functions/tax-meta-class/tax-meta-class.php:896
+msgid "Add more files"
+msgstr ""
+
+#: ../functions/tax-meta-class/tax-meta-class.php:948
+msgid "Select a color"
+msgstr ""
+
+#: ../includes/gallery-single-style-1.php:41
+#: ../includes/_lightbox-gallery.php:16
+msgid "Left"
+msgstr ""
+
+#: ../includes/gallery-single-style-1.php:45
+#: ../includes/_lightbox-gallery.php:20
+msgid "Right"
+msgstr ""
+
+#: ../includes/gallery-single-style-1.php:72
+msgid "Similar Photo Galleries"
+msgstr ""
+
+#: ../includes/gallery-single-style-1.php:74
+#: ../includes/single/page-title.php:25
+msgid "Back to homepage"
+msgstr ""
+
+#: ../includes/news-single.php:32
+msgid "by"
+msgstr ""
+
+#: ../includes/news-single.php:44
+msgid "Print this article"
+msgstr ""
+
+#: ../includes/news-single.php:47
+msgid "Font size"
+msgstr ""
+
+#: ../includes/news-single.php:56
+msgid "Pages:"
+msgstr ""
+
+#: ../includes/news-single.php:62
+msgid "Next page"
+msgstr ""
+
+#: ../includes/news-single.php:64
+msgid "Previous page"
+msgstr ""
+
+#: ../includes/theme-config.php:331
+msgid "You didn't create a slider yet."
+msgstr ""
+
+#: ../includes/top.php:103
+msgid "Weather Report"
+msgstr ""
+
+#: ../includes/top.php:130
+msgid "Type &amp; hit enter"
+msgstr ""
+
+#: ../includes/top.php:233
+msgid "Category Jumptlist"
+msgstr ""
+
+#: ../includes/top.php:237
+msgid "Jumptlist"
+msgstr ""
+
+#: ../includes/admin/general.php:94
+msgid "Header Share Buttons"
+msgstr ""
+
+#: ../includes/admin/general.php:112
+msgid "Social Buttons On Right Side"
+msgstr ""
+
+#: ../includes/admin/general.php:122
+msgid "Facebook Account URL"
+msgstr ""
+
+#: ../includes/admin/general.php:131
+msgid "Twitter Account URL"
+msgstr ""
+
+#: ../includes/admin/general.php:139
+msgid "Google+ Account URL"
+msgstr ""
+
+#: ../includes/admin/general.php:154
+msgid "Category Jumplist"
+msgstr ""
+
+#: ../includes/admin/general.php:167
+msgid "Set Jumplist Category"
+msgstr ""
+
+#: ../includes/admin/general.php:182
+msgid ""
+"Allow visitors to rate posts (only in case, if the post has a editros review "
+"too)"
+msgstr ""
+
+#: ../includes/admin/general.php:340
+msgid "Post Settings"
+msgstr ""
+
+#: ../includes/admin/general.php:345
+msgid "Show post date in post lists:"
+msgstr ""
+
+#: ../includes/admin/general.php:351
+msgid "Show post comment count in post lists:"
+msgstr ""
+
+#: ../includes/admin/general.php:357
+msgid "Show post author in blog page:"
+msgstr ""
+
+#: ../includes/admin/general.php:363
+msgid "Show post date in single post:"
+msgstr ""
+
+#: ../includes/admin/general.php:369
+msgid "Show post author in single post:"
+msgstr ""
+
+#: ../includes/admin/general.php:617
+msgid "Top Banner"
+msgstr ""
+
+#: ../includes/admin/general.php:623 ../includes/admin/general.php:655
+msgid "Enable Banner"
+msgstr ""
+
+#: ../includes/admin/general.php:649
+msgid "Default Single Post Banner"
+msgstr ""
+
+#: ../includes/admin/style.php:6
+msgid "Style Settings"
+msgstr ""
+
+#: ../includes/admin/style.php:18
+msgid "Font Style"
+msgstr ""
+
+#: ../includes/admin/style.php:19
+msgid "Page Colors/Style"
+msgstr ""
+
+#: ../includes/admin/style.php:20
+msgid "Layout"
+msgstr ""
+
+#: ../includes/admin/style.php:73
+msgid "Default Category/News page Color"
+msgstr ""
+
+#: ../includes/admin/style.php:92
+msgid "Page Color Settings"
+msgstr ""
+
+#: ../includes/admin/style.php:98
+msgid "Main Color Scheme:"
+msgstr ""
+
+#: ../includes/admin/style.php:105
+msgid "Main Menu Color:"
+msgstr ""
+
+#: ../includes/admin/style.php:112
+msgid "Link color:"
+msgstr ""
+
+#: ../includes/admin/style.php:119
+msgid "Mouse-Over link color:"
+msgstr ""
+
+#: ../includes/admin/style.php:126
+msgid "Footer Widget Title Color:"
+msgstr ""
+
+#: ../includes/admin/style.php:133
+msgid "Footer Widget Title Bottom Border:"
+msgstr ""
+
+#: ../includes/admin/style.php:148
+msgid "Body Backgrounds (only boxed view)"
+msgstr ""
+
+#: ../includes/admin/style.php:155
+msgid "Pattern:"
+msgstr ""
+
+#: ../includes/admin/style.php:156
+msgid "Custom Image:"
+msgstr ""
+
+#: ../includes/admin/style.php:167
+msgid "Texture 1"
+msgstr ""
+
+#: ../includes/admin/style.php:168
+msgid "Texture 2"
+msgstr ""
+
+#: ../includes/admin/style.php:169
+msgid "Texture 3"
+msgstr ""
+
+#: ../includes/admin/style.php:170
+msgid "Texture 4"
+msgstr ""
+
+#: ../includes/admin/style.php:171
+msgid "Texture 5"
+msgstr ""
+
+#: ../includes/admin/style.php:180
+msgid "Body Background Color:"
+msgstr ""
+
+#: ../includes/admin/style.php:190
+msgid "Body Background Image:"
+msgstr ""
+
+#: ../includes/admin/style.php:203 ../includes/admin/style.php:330
+msgid "Save Changes"
+msgstr ""
+
+#: ../includes/admin/style.php:223
+msgid "Enable Responsive"
+msgstr ""
+
+#: ../includes/admin/style.php:228
+msgid "Enable"
+msgstr ""
+
+#: ../includes/admin/style.php:243
+msgid "Page Layout"
+msgstr ""
+
+#: ../includes/admin/style.php:250
+msgid "Boxed:"
+msgstr ""
+
+#: ../includes/admin/style.php:251
+msgid "Wide:"
+msgstr ""
+
+#: ../includes/admin/style.php:264
+msgid "Header Style"
+msgstr ""
+
+#: ../includes/admin/style.php:269
+msgid "Style"
+msgstr ""
+
+#: ../includes/admin/style.php:272
+msgid "Logo + Banner"
+msgstr ""
+
+#: ../includes/admin/style.php:273
+msgid "Weather Forecast + Logo + Search"
+msgstr ""
+
+#: ../includes/admin/style.php:292
+msgid "Sticky:"
+msgstr ""
+
+#: ../includes/admin/style.php:293
+msgid "Normal:"
+msgstr ""
+
+#: ../includes/admin/style.php:309
+msgid "Page Width"
+msgstr ""
+
+#: ../includes/admin/style.php:316
+msgid "1240 PX:"
+msgstr ""
+
+#: ../includes/admin/style.php:317
+msgid "1000 PX:"
+msgstr ""
+
+#: ../includes/admin/functions/default-values.php:141
+#: ../includes/lib/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../includes/admin/functions/default-values.php:142
+#: ../includes/lib/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: ../includes/admin/functions/default-values.php:143
+#: ../includes/lib/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../includes/admin/functions/default-values.php:144
+#: ../includes/lib/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../includes/admin/functions/default-values.php:155
+#: ../includes/lib/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../includes/admin/functions/default-values.php:156
+#: ../includes/lib/class-tgm-plugin-activation.php:394
+#: ../includes/lib/class-tgm-plugin-activation.php:3244
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../includes/admin/functions/default-values.php:157
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: ../includes/admin/functions/general.php:150
+msgid " Management"
+msgstr ""
+
+#: ../includes/home-blocks/latest-news-1.php:26
+#: ../includes/home-blocks/latest-news-2.php:23
+#: ../includes/home-blocks/latest-news-3.php:23
+#: ../includes/home-blocks/latest-news-4.php:23
+msgid "View all posts"
+msgstr ""
+
+#: ../includes/home-blocks/latest-news-1.php:53
+#: ../includes/home-blocks/latest-news-1.php:74
+#: ../includes/home-blocks/latest-news-2.php:51
+#: ../includes/home-blocks/reviews.php:48
+#: ../includes/single/post-related.php:69
+msgid " ago"
+msgstr ""
+
+#: ../includes/home-blocks/latest-news-1.php:88
+#: ../includes/home-blocks/latest-news-2.php:64
+#: ../includes/home-blocks/latest-news-3.php:82
+#: ../includes/home-blocks/latest-news-3.php:132
+#: ../includes/home-blocks/latest-news-4.php:73
+#: ../includes/home-blocks/latest-news-4.php:115
+#: ../includes/home-blocks/reviews.php:78
+#: ../includes/home-blocks/reviews.php:90 ../includes/loop/post.php:82
+#: ../includes/single/post-ratings.php:36
+#: ../includes/single/post-ratings.php:55
+#: ../includes/single/post-ratings.php:97
+#: ../includes/widgets/widget-quadrum-latest-posts.php:123
+#: ../includes/widgets/widget-quadrum-popular-posts.php:119
+msgid "out of 5"
+msgstr ""
+
+#: ../includes/home-blocks/latest-news-1.php:91
+#: ../includes/home-blocks/latest-news-2.php:67
+#: ../includes/home-blocks/latest-news-3.php:85
+#: ../includes/home-blocks/latest-news-3.php:135
+#: ../includes/home-blocks/latest-news-4.php:76 ../includes/loop/post.php:85
+msgid "Rating:"
+msgstr ""
+
+#: ../includes/home-blocks/latest-news-3.php:93
+#: ../includes/home-blocks/latest-news-3.php:140
+#: ../includes/home-blocks/latest-news-4.php:84 ../includes/loop/post.php:94
+msgid "Read More"
+msgstr ""
+
+#: ../includes/home-blocks/shop.php:20
+msgid "View All Items:"
+msgstr ""
+
+#: ../includes/home-blocks/shop.php:35
+msgid "Sale!"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:393
+#: ../includes/lib/class-tgm-plugin-activation.php:912
+#: ../includes/lib/class-tgm-plugin-activation.php:2618
+#: ../includes/lib/class-tgm-plugin-activation.php:3665
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:395
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:1019
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:1019
+#: ../includes/lib/class-tgm-plugin-activation.php:1022
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:1022
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2067
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2358
+msgid "Required"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2361
+msgid "Recommended"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2377
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2380
+msgid "External Source"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2383
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2400
+msgid "Not Installed"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2404
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2406
+msgid "Active"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2412
+msgid "Required Update not Available"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2415
+msgid "Requires Update"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2418
+msgid "Update recommended"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2575
+msgid "Installed version:"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2583
+msgid "Minimum required version:"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2595
+msgid "Available version:"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2618
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2632
+msgid "Plugin"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2633
+msgid "Source"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2634
+msgid "Type"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2638
+msgid "Version"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2639
+msgid "Status"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2688
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2693
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2699
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2769
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2802
+msgid "Install"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2808
+msgid "Update"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2811
+msgid "Activate"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2842
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2844
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2885
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2887
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:2993
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:3019
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:3243
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:3583
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:3586
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:3588
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:3592
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:3594
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:3594
+#: ../includes/lib/class-tgm-plugin-activation.php:3602
+msgid "Show Details"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:3594
+#: ../includes/lib/class-tgm-plugin-activation.php:3602
+msgid "Hide Details"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:3595
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:3597
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:3600
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:3603
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../includes/lib/class-tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../includes/loop/no-post.php:11
+msgid "No Articles Found"
+msgstr ""
+
+#: ../includes/loop/no-post.php:13
+#, php-format
+msgid ""
+"Sorry, there are no articles here ! <br/>You can <a href=\"%1$s\">contact "
+"us</a> to resolve this problem !"
+msgstr ""
+
+#: ../includes/loop/no-post.php:15
+#, php-format
+msgid "Or You can still <a href=\"%1$s\">go back to Homepage</a> !"
+msgstr ""
+
+#: ../includes/single/about-author.php:46
+msgid "More articles by"
+msgstr ""
+
+#: ../includes/single/post-highlights.php:9
+msgid "Story Highlights"
+msgstr ""
+
+#: ../includes/single/post-ratings.php:52
+msgid "Visitors Vote"
+msgstr ""
+
+#: ../includes/single/post-ratings.php:63
+msgid "Overview"
+msgstr ""
+
+#: ../includes/single/post-ratings.php:80
+msgid "Excellent"
+msgstr ""
+
+#: ../includes/single/post-ratings.php:82
+msgid "Good"
+msgstr ""
+
+#: ../includes/single/post-ratings.php:84
+msgid "Average"
+msgstr ""
+
+#: ../includes/single/post-ratings.php:86
+msgid "Fair"
+msgstr ""
+
+#: ../includes/single/post-ratings.php:88
+msgid "Poor"
+msgstr ""
+
+#: ../includes/single/post-ratings.php:90
+msgid "Very Poor"
+msgstr ""
+
+#: ../includes/single/post-related.php:41
+msgid "Related Articles"
+msgstr ""
+
+#: ../includes/single/post-tags.php:8
+msgid "Tags assigned to this article:"
+msgstr ""
+
+#: ../includes/single/share.php:12
+msgid "Share this article:"
+msgstr ""
+
+#: ../includes/single/share.php:15
+msgid "Facebook"
+msgstr ""
+
+#: ../includes/single/share.php:19
+msgid "Twitter"
+msgstr ""
+
+#: ../includes/single/share.php:23
+msgid "Google+"
+msgstr ""
+
+#: ../includes/single/share.php:27
+msgid "LinkedIn"
+msgstr ""
+
+#: ../includes/sliders/breaking-news.php:41
+msgid "Breaking News"
+msgstr ""
+
+#: ../includes/sliders/breaking-news.php:49
+msgid "No posts were found"
+msgstr ""
+
+#: ../includes/widgets/widget-ad160x250.php:34
+msgid ""
+"A widget that allows the display and configuration of of a single 160x250 "
+"Banner."
+msgstr ""
+
+#: ../includes/widgets/widget-ad160x250.php:40
+msgid " Custom 160x250 Ad"
+msgstr ""
+
+#: ../includes/widgets/widget-ad160x250.php:122
+#: ../includes/widgets/widget-ad300x250.php:123
+msgid "Ad image url:"
+msgstr ""
+
+#: ../includes/widgets/widget-ad160x250.php:129
+#: ../includes/widgets/widget-ad300x250.php:130
+msgid "Ad link url:"
+msgstr ""
+
+#: ../includes/widgets/widget-ad300x250.php:35
+msgid ""
+"A widget that allows the display and configuration of of a single 300x250 "
+"Banner."
+msgstr ""
+
+#: ../includes/widgets/widget-ad300x250.php:41
+msgid " Custom 300x250 Ad"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-comments.php:12
+msgid "Recent Comments"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-comments.php:26
+msgid "Comment count:"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-comments.php:83
+msgid "view comment"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-contact.php:6
+#: ../includes/widgets/widget-quadrum-contact.php:13
+msgid "Contact"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-contact.php:37
+msgid "Email:"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-contact.php:39
+msgid "Email Subtitle:"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-contact.php:41
+msgid "Phone:"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-contact.php:43
+msgid "Phone Subtitle:"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-contact.php:45
+msgid "Address:"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-contact.php:47
+msgid "Address Subtitle:"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-contact.php:49
+msgid "Text:"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-latest-posts.php:6
+#: ../includes/widgets/widget-quadrum-latest-posts.php:13
+msgid "Latests News"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-latest-posts.php:27
+#: ../includes/widgets/widget-quadrum-popular-posts.php:27
+msgid "Category:"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-latest-posts.php:49
+#: ../includes/widgets/widget-quadrum-popular-posts.php:50
+msgid "Post count:"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-latest-posts.php:98
+msgid "View more"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-latest-posts.php:133
+#: ../includes/widgets/widget-quadrum-popular-posts.php:130
+msgid "read more"
+msgstr ""
+
+#: ../includes/widgets/widget-quadrum-popular-posts.php:6
+#: ../includes/widgets/widget-quadrum-popular-posts.php:13
+msgid "Popular Posts"
+msgstr ""
+
+#: ../js/scripts.php:13 ../js/scripts.php:44
+msgid "You didn't enter Your First Name."
+msgstr ""
+
+#: ../js/scripts.php:16 ../js/scripts.php:47
+msgid "First Name is the wrong length."
+msgstr ""
+
+#: ../js/scripts.php:28 ../js/scripts.php:59
+msgid "You didn't enter an email address."
+msgstr ""
+
+#: ../js/scripts.php:31 ../js/scripts.php:62
+msgid "The email address contains illegal characters."
+msgstr ""
+
+#: ../js/scripts.php:75
+msgid "You didn't enter Your message."
+msgstr ""
+
+#: ../js/scripts.php:78
+msgid "The message is to short."
+msgstr ""
+
+#: ../js/scripts.php:87
+msgid "Please select at least one checkbox!"
+msgstr ""

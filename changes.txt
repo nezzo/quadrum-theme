@@ -1,0 +1,286 @@
+Version 1.3.0
+* Edited Files
+style.css
+includes/single/post-ratings.php
+includes/admin/general.php
+functions/jquery-css-include.php
+functions/quadrum-menu.php
+functions/ajax.php
+functions/homepage-blocks.php
+functions/other.php
+js/quadrum.js
+languages/quadrum.pot
+
+Version 1.2.9
+* Edited Files
+style.css
+js/scripts.min.js
+js/scripts.js
+
+Version 1.2.8
+* Edited Files
+style.css
+template-contact.php
+functions/register.php
+functions/other.php
+
+Version 1.2.7
+* Edited Files
+style.css
+functions/tax-meta-class/tax-meta-class.php
+
+
+Version 1.2.6
+* Edited Files
+style.css
+includes/top.php
+includes/home-blocks/html.php
+includes/home-blocks/banner.php
+includes/lib/plugins/js_composer.zip
+
+Version 1.2.5
+* Edited Files
+style.css
+includes/widgets/widget-ad160x250.php
+includes/widgets/widget-ad300x250.php
+includes/widgets/widget-quadrum-comments.php
+includes/widgets/widget-quadrum-contact.php
+includes/widgets/widget-quadrum-gallery.php - moved to Quadrum extended plugin
+includes/widgets/widget-quadrum-aweber.php - moved to Quadrum extended plugin
+includes/shortcodes/ - moved to Quadrum extended plugin
+includes/widgets/widget-quadrum-popular-posts.php
+includes/lib/plugins/js_composer.zip
+includes/lib/plugins/layersliderwp-6.0.5.installable.zip
+includes/lib/class-tgm-plugin-activation.php
+includes/admin/functions/default-values.php
+includes/admin/functions/general.php
+functions/other.php
+functions/tax-meta-class/tax-meta-class.php
+functions/custom-admin-menu.php
+functions/register.php
+functions/filters.php
+functions/theme-config.php
+includes/top.php
+functions.php
+header.php
+languages/
+
+Version 1.2.4 
+* Edited Files
+style.css
+functions/other.php
+includes/home-blocks/latest-news-1.php
+includes/home-blocks/latest-news-2.php
+includes/home-blocks/reviews.php
+includes/home-blocks/video.php
+
+Version 1.2.2
+* Edited Files
+style.css
+includes/lib/plugins/js_composer.zip
+includes/lib/plugins/layersliderwp-5.6.7.installable.zip
+js/theme-scripts.js
+js/theme-scripts.min.js
+
+Version 1.2.1
+* Edited Files
+style.css
+includes/lib/plugins/js_composer.zip
+
+Version 1.2.0
+* Edited Files
+style.css
+includes/widgets/init.php
+includes/single/share.php
+functions/ajax.php
+js/scripts.js
+js/scripts.min.js
+
+Version 1.1.9
+* Edited Files
+style.css
+includes/lib/plugins/js_composer.zip
+includes/lib/plugins/layersliderwp-5.6.2.installable.zip
+includes/admin/functions/default-values.php
+includes/widgets/widget-ad160x250.php
+includes/widgets/widget-ad300x250.php
+includes/widgets/widget-quadrum-aweber.php
+includes/widgets/widget-quadrum-comments.php
+includes/widgets/widget-quadrum-contact.php
+includes/widgets/widget-quadrum-gallery.php
+includes/widgets/widget-quadrum-latest-posts.php
+includes/widgets/widget-quadrum-popular-posts.php
+includes/widgets/widget-quadrum-social.php
+
+Version 1.1.8
+* Edited Files
+style.css
+includes/lib/plugins/js_composer.zip
+css/main-stylesheet.css
+css/main-stylesheet.min.css
+
+Version 1.1.7
+* Edited Files
+style.css
+includes/lib/plugins/js_composer.zip
+
+Version 1.1.6
+* Edited Files
+style.css
+functions/filters.php
+functions/other.php
+includes/widgets/widget-quadrum-comments.php
+includes/single/about-author.php
+includes/lib/plugins/js_composer.zip
+
+Version 1.1.5
+style.css
+functions/ajax.php
+includes/lib/plugins/js_composer.zip
+
+Version 1.1.4
+*Edited Files
+style.css
+includes/admin/buttons-formatting/custom-editor-style.css
+includes/admin/buttons-formatting/editor-plugin.js
+includes/lib/plugins/js_composer.zip
+
+Version 1.1.3
+* Edited Files
+style.css
+includes/lib/plugins/js_composer.zip
+includes/lib/plugins/layersliderwp-5.3.2.installable.zip
+includes/admin/functions/default-values.php
+includes/single/about-author.php
+
+Version 1.1.2
+* Edited Files
+style.css
+functions/other.php
+includes/admin/general.php
+
+Version 1.1.1
+* Edited Files
+style.css
+includes/lib/plugins/js_composer.zip
+
+Version 1.1.0
+* Edited Files
+style.css
+js/theme-scripts.js
+js/theme-scripts.min.js
+
+
+Version 1.0.9
+* Edited Files
+style.css
+includes/home-blocks/latest-news-1.php
+includes/home-blocks/latest-news-2.php
+includes/home-blocks/latest-news-3.php
+includes/home-blocks/latest-news-4.php
+includes/single/image.php
+
+Version 1.0.8
+* Edited Files
+style.css
+includes/lib/plugins/js_composer.zip
+css/main-stylesheet.css
+css/main-stylesheet.min.css
+
+Version 1.0.7
+* Edited Files
+style.css
+includes/sidebar.php
+includes/loop/loop-start.php
+
+
+Version 1.0.6
+* Edited Files
+style.css
+includes/admin/functions/jquery-css-include.php
+
+Version 1.0.5
+* Edited Files
+style.css
+includes/single/image.php
+includes/lib/plugins/js_composer.zip
+includes/lib/plugins/layersliderwp-5.1.1.installable.zip
+
+Version 1.0.4
+* Edited Files
+style.css
+css/main-stylesheet.css
+css/main-stylesheet.min.css
+js/theme-scripts.js
+js/theme-scripts.min.js
+functions/quadrum-menu.php
+includes/home-blocks/reviews.php
+includes/home-blocks/shop.php
+functions/drag-drop.php
+functions/homepage-blocks.php
+images/no-image-314x211.jpg
+
+Version 1.0.3
+* Edited Files
+style.css
+js/ot-menu.js
+functions/jquery-css-include.php
+css/ot-menu.css
+css/main-stylesheet.css
+css/main-stylesheet.min.css
+css/responsive
+includes/top.php
+footer.php
+languages/
+
+
+Version 1.0.2
+* Edited Files
+style.css
+header.php
+functions/jquery-css-include.php
+js/scripts.js
+js/scripts.min.js
+js/ot_gallery.js
+js/ot_gallery.min.js
+js/lightbox.js
+js/lightbox.min.js
+js/theme-scripts.js
+js/theme-scripts.min.js
+css/main-stylesheet.css
+css/main-stylesheet.min.css
+includes/admin/general.php
+includes/admin/style.php
+includes/news-single.php
+includes/single/page-title.php
+includes/single/about-author.php
+includes/single/post-ratings.php
+includes/home-blocks/latest-news-1.php
+includes/home-blocks/latest-news-2.php
+includes/home-blocks/latest-news-3.php
+includes/home-blocks/latest-news-4.php
+includes/top.php
+includes/news-single.php
+includes/loop/loop-start.php
+includes/loop/post.php
+includes/widgets/widget-quadrum-latest-posts.php
+includes/widgets/widget-quadrum-popular-posts.php
+includes/lib/plugins/js_composer.zip
+functions/others.php
+functions/quadrum-menu.php
+css/responsive
+languages/
+
+
+
+Version 1.0.1
+* Edited Files
+style.css
+css/responsive/phone.css
+css/responsive/ipad.css
+
+
+Version 1.0.0
+* Initial Release
+
+
