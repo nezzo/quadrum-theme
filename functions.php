@@ -2,6 +2,7 @@
 	if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	define("THEME_NAME", 'quadrum');
 	define("THEME_FULL_NAME", 'Quadrum');
+	
 
 
 	// THEME PATHS
@@ -45,6 +46,7 @@
 	require_once(THEME_FUNCTIONS_PATH."init.php");
 	require_once(THEME_WIDGETS_PATH."init.php");
 	require_once(THEME_INCLUDES_PATH."theme-config.php");
+ 	
 
 
 
@@ -59,8 +61,10 @@
 	remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 	add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
 	add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
+ 	
+	
 	add_action( 'wp_enqueue_scripts', 'filterGeoJs');
-	add_action( 'wp_enqueue_scripts', 'raportJs');
+	
 
 	function my_theme_wrapper_start() {
 	  echo '<section id="main">';
@@ -88,15 +92,62 @@
 	
 	//подключаю свой скрипт (фильтр по геолокации)
 	function filterGeoJs(){
-	  wp_enqueue_script( 'wp_footer_sliding_main_js', '/wp-content/themes/quadrum-theme' . '/js/filterGeoJs.js', array(), null, true );
+	  wp_enqueue_script( 'wp_footer_sliding_main_js', '/wp-content/themes/quadrum' . '/js/filterGeoJs.js', array(), null, true );
+
+	}
+ 
+	//подключаем скрипт с ajax запросом  и переименовываем admin_url
+	add_action( 'wp_enqueue_scripts', 'raportAjax_data');
+	function raportAjax_data(){
+ 	  wp_enqueue_script( 'raportAjaxJS', home_url( '/wp-content/themes/quadrum/js/raport.js'), array('jquery'));
+
+	  wp_localize_script('raportAjaxJS', 'raportAjax_object', 
+		  array(
+			  'url' => admin_url('admin-ajax.php'),
+			 
+		  )
+	  );  
 
 	}
 	
-	//подключаю свой скрипт (рапорт)
-	function raportJs(){
-	  wp_enqueue_script( 'wp_footer_sliding_main_js', '/wp-content/themes/quadrum-theme' . '/js/raport.js', array(), null, true );
+	//функция принимает данные с рапорта и заносит в базу 
+	add_action('wp_ajax_raport_callback', 'raport');
+	add_action('wp_ajax_nopriv_raport_callback', 'raport');
+	function raport(){
+	    //по ajax получаем массив данных для разбора
+ 	    if(!empty($_POST['mas'])){
+	       $mas = $_POST['mas'];
+	       
+	       $content = "
+		Место: $mas[1]
+		$mas[2]
+		
+		Cубъект рапорта: $mas[3]
+		$mas[8]
+	       ";
+	       
+	       
+	      // Создаем массив данных новой записи
+	      $post_data = array(
+		'post_title'    => wp_strip_all_tags($mas[0]),
+		'post_content'  => $content,
+		'post_status'   => 'pending',
+		//'post_author'   => 1,
+		//'post_category' => array( 8,39 )
+	      );
 
-	}
-	
+	      // Вставляем запись в базу данных
+	      $post_id = wp_insert_post( $post_data );
+	      
+	      echo $post_id;
+	      
+	    }
+	    
+	    // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
+	    wp_die();
+	 }
+	 
+	 
+ 	
 
 ?>

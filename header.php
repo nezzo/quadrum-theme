@@ -31,7 +31,7 @@
 		<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('rss2_url'); ?>" title="<?php printf( __('%s latest posts','quadrum-theme'), esc_html( get_bloginfo('name'), 1 ) ); ?>" />
 		<link rel="alternate" type="application/rss+xml" href="<?php bloginfo('comments_rss2_url') ?>" title="<?php printf( __('%s latest comments','quadrum-theme'), esc_html( get_bloginfo('name'), 1 ) ); ?>" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-		<link rel='stylesheet' id='fonts-css'  href='http://smilefrom.space/wp-content/themes/quadrum-theme/css/bootstrap.min.css' type='text/css' media='all' />
+		<link rel='stylesheet' id='fonts-css'  href='http://smilefrom.space/wp-content/themes/quadrum/css/bootstrap.min.css' type='text/css' media='all' />
 		
 		<?php wp_head(); ?>	
 
