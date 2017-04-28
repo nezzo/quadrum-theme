@@ -12,6 +12,8 @@
     $postComments = get_option(THEME_NAME."_post_comment");
     $postAuthor = get_option(THEME_NAME."_post_author");
 
+    global $wpdb;
+
 
 
    
@@ -22,31 +24,25 @@
   <div class="col-md-12">
     <div class="filterGeo">
       <div class="row">
-	<div class="col-md-4">
-	  <div class="cityGeo">
-	      <select name="hero[]">
-	      <option selected="select" value="false" disabled>Геолокация</option>
-	      <option value="мо сква">Москва</option>
- 	      <option value="питер">Питер</option>
-	      <option value="киров">Киров</option>
-	      <option value="воронеж">Воронеж</option>
-	      </select>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <div class="trubleGeo">
-	      <select name="hero[]">
-	      <option selected="select" value="false" disabled>Инстанция</option>
-	      <option value="гаи">ГАИ</option>
- 	      <option value="жэк">ЖЭК</option>
-	      <option value="автодор">Автодор</option>
-	      <option value="полиция">Полиция</option>
-	      </select>
-	  </div>
-	</div>
-	<div class="col-md-4">
-	  <button class="searchGeo">Фильтр</button>
-	</div>
+    <div class="col-md-4">
+      <div class="cityGeo">
+          <select class="btnRaportSelect btn btn-primary" name="hero[]">
+              <option selected="select" value="false" style="color:grey !important;" disabled>Геолокация</option>
+              <?= do_action("wp_getRaportCategory", $wpdb->prefix . 'raportTableCity');?>
+          </select>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="trubleGeo">
+          <select class="btnRaportSelect btn btn-primary" name="hero[]">
+          <option selected="select" value="false" style="color:grey !important;" disabled>Инстанция</option>
+         <?= do_action("wp_getRaportCategory", $wpdb->prefix . 'raportTableInstant');?>
+          </select>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-success searchGeo">Фильтр</button>
+    </div>
       </div>
     </div>
   </div>

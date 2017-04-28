@@ -2,6 +2,9 @@
 ######################
 ###Страница рапорта###
 ######################
+/*
+Template Name: Рапорт
+*/
 ?>
 <?php
 	if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly

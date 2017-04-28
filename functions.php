@@ -61,9 +61,20 @@
 	remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 	add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
 	add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
- 	
 	
-	add_action( 'wp_enqueue_scripts', 'filterGeoJs');
+	//функция принимает данные с рапорта и заносит в базу ajax
+	add_action('wp_ajax_raport_callback', 'raport');
+	add_action('wp_ajax_nopriv_raport_callback', 'raport');
+	//подключаем скрипт с ajax запросом  и переименовываем admin_url
+	add_action( 'wp_enqueue_scripts', 'raportAjax_data');
+ 	//регистрация скрипта фильтра
+ 	add_action( 'wp_enqueue_scripts', 'filterGeoJs');
+ 	//регистрация скрипта bootstrap
+ 	add_action( 'wp_enqueue_scripts', 'bootstrapJS');
+ 	//регистрируем хук на получение id категорий
+ 	add_action('wp_getRaportCategory','getRaportCategory',1,1);
+ 	//регистрируем хук для получения списка имен и ЧПУ
+ 	add_action('wp_getNameSlugCategory', 'getNameSlugCategory',1,1);
 	
 
 	function my_theme_wrapper_start() {
@@ -90,14 +101,20 @@
 	//remove layserslider notifier
 	$GLOBALS['lsAutoUpdateBox'] = false;
 	
+	
+	
 	//подключаю свой скрипт (фильтр по геолокации)
 	function filterGeoJs(){
 	  wp_enqueue_script( 'wp_footer_sliding_main_js', '/wp-content/themes/quadrum' . '/js/filterGeoJs.js', array(), null, true );
 
 	}
+	
+	//подключаю скрипт bootstrap
+	function bootstrapJS(){
+	  wp_enqueue_script( 'wp_footer_bootstrapJS_js', '/wp-content/themes/quadrum' . '/js/bootstrap.js', array(), null, true );
+
+	}
  
-	//подключаем скрипт с ajax запросом  и переименовываем admin_url
-	add_action( 'wp_enqueue_scripts', 'raportAjax_data');
 	function raportAjax_data(){
  	  wp_enqueue_script( 'raportAjaxJS', home_url( '/wp-content/themes/quadrum/js/raport.js'), array('jquery'));
 
@@ -110,9 +127,8 @@
 
 	}
 	
-	//функция принимает данные с рапорта и заносит в базу 
-	add_action('wp_ajax_raport_callback', 'raport');
-	add_action('wp_ajax_nopriv_raport_callback', 'raport');
+	
+	//создаем новый пост из рапорта
 	function raport(){
 	    //по ajax получаем массив данных для разбора
  	    if(!empty($_POST['mas'])){
@@ -145,6 +161,38 @@
 	    
 	    // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
 	    wp_die();
+	 }
+	 
+	 
+	 
+	 	 
+	 //получаем id категорий
+	 function getRaportCategory($table){
+	    global $wpdb;
+	  
+	    $selectData = $wpdb->get_results("SELECT term_id  FROM $table ");
+	  
+	    foreach ($selectData as $dataId) {
+		
+		//с помощью JOIN получаем с таблиц данные имена рубрик и ЧПУ
+		$selectNameUrl = $wpdb->get_results($wpdb->prepare("SELECT ".$table.".id, name, slug  FROM $wpdb->terms
+				INNER JOIN $table on ".$table.".term_id = wp_terms.term_id
+				WHERE wp_terms.term_id = %d",$dataId->term_id));
+				
+		do_action("wp_getNameSlugCategory",$selectNameUrl);
+	    }
+ 
+	  
+	  
+	 
+	 }
+	 
+	 // генерируем список имен и ЧПУ категорий для выпадающего списка
+	 function getNameSlugCategory($selectNameUrl){
+	   ?>
+		 <option value='<?=$selectNameUrl->slug?>'><?=$selectNameUrl->name?></option>
+	    <?php	  
+	  
 	 }
 	 
 	 

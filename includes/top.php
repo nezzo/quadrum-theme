@@ -125,7 +125,8 @@
 						  </div> 
 						  <div class="col-md-1">
 						    <div class="raport">
-						      <button>РАПОРт</button>
+						    <?php /*подставляем id нужной нам страницы (страница рапорта)*/ ?>
+						      <a class="btn btn-danger" href="<?=get_page_link(675,false, true)?>">Рaпорт</a>
 						    </div>
 						  </div>
 						  <div class="col-md-3">

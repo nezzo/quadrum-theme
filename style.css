@@ -105,11 +105,17 @@ ul li a i { font-style: normal; }
 }
 
 /*My code:)*/
+select.btnRaportSelect.btn.btn-primary option {
+    background-color: white;
+    color: black;
+}
+
+
 .filterGeo {
     margin: 15px 15px;
-    height: 40px;
+    height: 50px;
     border: 1px solid #e5e5e5;
-    padding: 10px 10px 10px 40px;
+    padding: 8px 0px 0px 50px;
 }
 .soc_button {
     float: right;
