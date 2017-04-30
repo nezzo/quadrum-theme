@@ -65,6 +65,11 @@
 	//функция принимает данные с рапорта и заносит в базу ajax
 	add_action('wp_ajax_raport_callback', 'raport');
 	add_action('wp_ajax_nopriv_raport_callback', 'raport');
+	//функция ищет по символу в базе  ajax
+	add_action('wp_ajax_searchSymbol_callback', 'searchSymbol');
+	add_action('wp_ajax_nopriv_searchSymbol_callback', 'searchSymbol');
+	//регистрация скрипта Autocomplete
+ 	add_action( 'wp_enqueue_scripts', 'raportAutocomplete');
 	//подключаем скрипт с ajax запросом  и переименовываем admin_url
 	add_action( 'wp_enqueue_scripts', 'raportAjax_data');
  	//регистрация скрипта фильтра
@@ -75,6 +80,7 @@
  	add_action('wp_getRaportCategory','getRaportCategory',1,1);
  	//регистрируем хук для получения списка имен и ЧПУ
  	add_action('wp_getNameSlugCategory', 'getNameSlugCategory',1,1);
+ 	add_action('wp_getImage','getImage',1,1);
 	
 
 	function my_theme_wrapper_start() {
@@ -109,12 +115,21 @@
 
 	}
 	
+	//подключаю свой скрипт (фильтр по геолокации)
+	function raportAutocomplete(){
+	  wp_enqueue_script( 'jquery-ui-autocomplete');
+	  wp_enqueue_style('wp_ui-autocomplete', '/wp-content/themes/quadrum' . '/css/jquery-ui.min.css');
+
+	}
+	
+	
 	//подключаю скрипт bootstrap
 	function bootstrapJS(){
 	  wp_enqueue_script( 'wp_footer_bootstrapJS_js', '/wp-content/themes/quadrum' . '/js/bootstrap.js', array(), null, true );
 
 	}
  
+	//подключаем script raport
 	function raportAjax_data(){
  	  wp_enqueue_script( 'raportAjaxJS', home_url( '/wp-content/themes/quadrum/js/raport.js'), array('jquery'));
 
@@ -130,6 +145,17 @@
 	
 	//создаем новый пост из рапорта
 	function raport(){
+	#TODO по поводу субъекта надо поставить проверку если субъект это массив то заносим в базу как новую личность а имя передаем в текст 
+	#рапорта если это не массив то просто передаем в текст. Второй момент, насчет категорий. Полученную категорию (имя) ищем в 
+	#базе  если есть получаем ид и отправляем в метод по созданию постов. Если не нашло  вернуло FALSE то нужно как то придумать 
+	#что бы отправляло пост ново созданный в катеорию "Без рубрики" а в тексте поста указать мол НЕТУ КАТЕГОРИИ : имя_категории  
+	#это сделать для двух категорий. Надо узнать как редактировать по почте можно или высылать доступы какие то хз. И насчет инфы для 
+	#админа мета_бокс если память не изменяет. Надо как то впихнуть и сюда данные и привязать к посту, добавление инфы в доп поле и 
+	#картинку можно использовать update_post или как то так куда вставлять id  только что созданого поста 
+	#(послу удачного создание поста) будет возвращаться id поста который мы будем вставлять на update  и подгружать картинку и мета_бокс
+	
+	
+	
 	    //по ajax получаем массив данных для разбора
  	    if(!empty($_POST['mas'])){
 	       $mas = $_POST['mas'];
@@ -195,6 +221,86 @@
 	  
 	 }
 	 
+	 
+	 //поиск  по букве
+	 function searchSymbol(){
+	  global $wpdb;
+	  
+	  $nameCategory = $_POST['category'];
+	  
+	   if(!empty($nameCategory)){
+	   
+	    switch($nameCategory){
+	      case "city":
+	      //переменная с названием таблицы Базы данных
+	    $table = $wpdb->prefix . 'raportTableCity';
+	    
+	    //делаем поиск по 1 букве и возвращаем результат
+	      $selectNameUrl = $wpdb->get_results("SELECT name FROM $wpdb->terms
+			      INNER JOIN $table on ".$table.".term_id = wp_terms.term_id");
+			      
+	      
+	    
+	    //возвращаем не пустой массив
+	      if(!empty($selectNameUrl)){
+	      
+		echo json_encode($selectNameUrl);
+	    
+	      }
+	      
+	      break;
+	      
+	      case "instant":
+		//переменная с названием таблицы Базы данных
+	    $table = $wpdb->prefix . 'raportTableInstant';
+	    
+	    //делаем поиск по 1 букве и возвращаем результат
+	      $selectNameUrl = $wpdb->get_results("SELECT name FROM $wpdb->terms
+			      INNER JOIN $table on ".$table.".term_id = wp_terms.term_id");
+			      
+	      
+	    
+	    //возвращаем не пустой массив
+	      if(!empty($selectNameUrl)){
+	      
+		echo json_encode($selectNameUrl);
+	    
+	      }
+	      
+	      break;
+	      
+	      case "subject":
+	      
+		//переменная с названием таблицы Базы данных
+		$table = $wpdb->prefix . 'raportTableSub';
+		
+		//делаем поиск по 1 букве и возвращаем результат
+		  $selectNameUrl = $wpdb->get_results("SELECT name FROM $table");
+				  
+		//возвращаем не пустой массив
+		  if(!empty($selectNameUrl)){
+		  
+		    echo json_encode($selectNameUrl);
+		
+		  }
+	      
+	      break;
+	      
+	    
+	    }
+	  
+	  }
+	   
+	   // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
+	    wp_die();
+	 }
+	 
+	 //получаем картинку для поста
+	 function getImage($url){
+	 
+	 //возвращаем ссылку на загруженный файл
+	  echo $url;
+	 }
 	 
  	
 
