@@ -2,8 +2,13 @@
 	if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	wp_reset_query();
 	
+	/* стандартные размеры миниатюрных картинок
 	$width = 890;
 	$height = 395;
+	*/
+	
+	$width = "";
+	$height = "";
 	$image = get_post_thumb($post->ID,$width,$height); 
 
 	//post details

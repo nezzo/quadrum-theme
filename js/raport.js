@@ -1,49 +1,7 @@
   //устраняем конфликт
   jQuery.noConflict();
   jQuery(document).ready(function($) {
-    jQuery(".otpravitRaport").click(function(){
-    //e.preventDefault();
-    
-    //#TODO надо узнать что делать с картинками куда грузить и как их отображать
-    let title = jQuery(".titleRaport").val();
-    let city = jQuery(".cityRaport").val();
-    let instant = jQuery(".instantRaport").val();
-    let subject = jQuery(".subjectRaport").val();
-    let body = jQuery(".bodyRaport").val();
-    let podpis = jQuery(".podpisRaport").val();
-    let mail = jQuery(".emailRaport").val();
-    let anon = jQuery(".anonInformRaport").val();
-    
-    //проверяем если нету такого субъекта то создаем массив из данных о субъекте и отправляем на сервер
-      if(subject == "Субъект не найден!"){
-	var nameSub = jQuery(".fioRaport").val();
-	var doljnost = jQuery(".doljnostRaport").val();
-	var work = jQuery(".workRaport").val();
-	var sink = jQuery(".sinkRaport").val();
-	
-	subject = [nameSub,doljnost,work,sink];
-	
-      }
-    
-      let arr = [title, city, instant, subject,body, podpis, mail, anon];  
-    
-   //заголовок поста обязательный
-      if(!!title){
-	  var data = {
-			    action: 'raport_callback', //на какой хук(функцию) отправлять запрос
-			    mas: arr
-		    };
-      
-		    //ajax  запрос
-		    jQuery.post( raportAjax_object.url, data, function(response) {
-			    console.log(response);
-		    });
-      }else{
-	jQuery(".titleRaport").css("border","1px solid red");
-	 
-      }
-    
-   });
+
     
     
     /* ПРИМЕР работы функции по условию (Если нету такой категории то выполняем другое действие (Выводим сообщение об ошибке, если нету категории) )
@@ -84,10 +42,8 @@
         source: tagSub,
         })
     }).blur(function() {
-        if(!!tagSub.indexOf(jQuery(this).val())) {
-	  jQuery('.subjectRaport').css("color","red");
-	  jQuery('.subjectRaport').val("Субъект не найден!");
-        }
+      //если нету совпадения выводим предупреждение
+       find(tagSub,jQuery(this).val());
     });
 
     
@@ -121,3 +77,15 @@ function getCategoryName(category){
       
   return mas;
 }  
+
+//функция по поиску  сравнения в массиве и значения
+function find(array, value) {
+ 
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === value)return i; 
+  }
+
+    jQuery('.subjectRaport').css("color","red");
+    jQuery('.subjectRaport').val("Субъект не найден!");
+  //return -1;
+}

@@ -63,11 +63,15 @@
 	add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
 	
 	//функция принимает данные с рапорта и заносит в базу ajax
-	add_action('wp_ajax_raport_callback', 'raport');
-	add_action('wp_ajax_nopriv_raport_callback', 'raport');
+	//add_action('wp_ajax_raport_callback', 'raport');
+	//add_action('wp_ajax_nopriv_raport_callback', 'raport');
+	add_action('wp_raport', 'raport',1,1);
 	//функция ищет по символу в базе  ajax
 	add_action('wp_ajax_searchSymbol_callback', 'searchSymbol');
 	add_action('wp_ajax_nopriv_searchSymbol_callback', 'searchSymbol');
+	//функция по скачиванию картинки на сервер ajax
+	add_action('wp_ajax_getImage_callback', 'getImage');
+	add_action('wp_ajax_nopriv_getImage_callback', 'getImage');
 	//регистрация скрипта Autocomplete
  	add_action( 'wp_enqueue_scripts', 'raportAutocomplete');
 	//подключаем скрипт с ajax запросом  и переименовываем admin_url
@@ -80,8 +84,10 @@
  	add_action('wp_getRaportCategory','getRaportCategory',1,1);
  	//регистрируем хук для получения списка имен и ЧПУ
  	add_action('wp_getNameSlugCategory', 'getNameSlugCategory',1,1);
- 	add_action('wp_getImage','getImage',1,1);
-	
+ 	//хук по добавлению нового объекта
+ 	add_action('wp_newSub','newSub',1,4);
+ 	 
+   	
 
 	function my_theme_wrapper_start() {
 	  echo '<section id="main">';
@@ -132,11 +138,12 @@
 	//подключаем script raport
 	function raportAjax_data(){
  	  wp_enqueue_script( 'raportAjaxJS', home_url( '/wp-content/themes/quadrum/js/raport.js'), array('jquery'));
+ 	  
 
 	  wp_localize_script('raportAjaxJS', 'raportAjax_object', 
 		  array(
 			  'url' => admin_url('admin-ajax.php'),
-			 
+			  'nonce' => wp_create_nonce('add_object')
 		  )
 	  );  
 
@@ -144,7 +151,7 @@
 	
 	
 	//создаем новый пост из рапорта
-	function raport(){
+	function raport($mas){
 	#TODO по поводу субъекта надо поставить проверку если субъект это массив то заносим в базу как новую личность а имя передаем в текст 
 	#рапорта если это не массив то просто передаем в текст. Второй момент, насчет категорий. Полученную категорию (имя) ищем в 
 	#базе  если есть получаем ид и отправляем в метод по созданию постов. Если не нашло  вернуло FALSE то нужно как то придумать 
@@ -153,20 +160,42 @@
 	#админа мета_бокс если память не изменяет. Надо как то впихнуть и сюда данные и привязать к посту, добавление инфы в доп поле и 
 	#картинку можно использовать update_post или как то так куда вставлять id  только что созданого поста 
 	#(послу удачного создание поста) будет возвращаться id поста который мы будем вставлять на update  и подгружать картинку и мета_бокс
-	
+	#Надо разобраться с условием на прием субъекта, какой то баг!!!!!!
 	
 	
 	    //по ajax получаем массив данных для разбора
- 	    if(!empty($_POST['mas'])){
-	       $mas = $_POST['mas'];
-	       
-	       $content = "
+ 	    if(!empty($mas)){
+ 	    
+ 	    //картинка 
+ 	    $file = $mas[9];
+ 	    
+ 	   //проверяем есть ли субъект и какое нам имя ставить
+ 	    if(!empty($mas[3]) && $mas[3] != "Субъект не найден!" ){
+ 		$subName = $mas[3];
+ 	    }else{
+	      //проверяем заполнено ли поле ФИО
+		  if(!empty($mas[4])){
+		  //регистрируем нового субъекта
+		    do_action('wp_newSub',$mas[4],$mas[5],$mas[6],$mas[7]);
+		    echo "number 2";
+		    $subName = var_dump($mas[4]);
+		  }
+	 }
+ 	    
+ 	    
+ 	    
+	     
+ 
+		
+ 	       $content = "
 		Место: $mas[1]
 		$mas[2]
 		
-		Cубъект рапорта: $mas[3]
+		Cубъект рапорта: $subName
 		$mas[8]
-	       ";
+		
+ 		
+		";
 	       
 	       
 	      // Создаем массив данных новой записи
@@ -175,13 +204,28 @@
 		'post_content'  => $content,
 		'post_status'   => 'pending',
 		//'post_author'   => 1,
-		//'post_category' => array( 8,39 )
+		//'post_category' => array( 8,39 ) #TODO надо создать будет функцию которая будет искать по имени и возвращать ид категории если нету такой категории то без рубрики
 	      );
 
-	      // Вставляем запись в базу данных
-	      $post_id = wp_insert_post( $post_data );
+	      //Вставляем запись в базу данных
+	      $post_id = wp_insert_post($post_data);
 	      
-	      echo $post_id;
+	      echo "post";
+	      var_dump($post_id);
+	      
+	      //делаем проверку, что бы это была картинка
+	       if($file["type"] =="image/png" || $file["type"] =="image/jpg" || $file["type"] =="image/jpeg" || $file["type"] =="image/bmp"){
+		
+		//получаем картинку с поля и  клеем ее к посту только что созданому
+	       $attachment_id = media_handle_upload("raport_file_upload", $post_id );
+	       
+	       // новую картинку заносим в миниатюры
+	       set_post_thumbnail( $post_id, $attachment_id );
+	       
+ 	       
+	       }
+	      
+	      //echo $post_id;
 	      
 	    }
 	    
@@ -295,13 +339,46 @@
 	    wp_die();
 	 }
 	 
-	 //получаем картинку для поста
-	 function getImage($url){
 	 
-	 //возвращаем ссылку на загруженный файл
-	  echo $url;
+	 //добавляем нового субъекта
+	 function newSub($name, $doljnost, $workInstant, $infoSub){
+	  global $wpdb;
+	  
+	  //проверяем не пустая ли переменная
+	    if(!empty($name)){
+	      
+	      //проверяем  имеют ли значения переменные если нет то оставляем пустыми
+	      if(empty($doljnost)){
+		$doljnost = "";
+	      }
+	      
+	      if(empty($workInstant)){
+		$workInstant = "";
+	      }
+	      
+	      if(empty($infoSub)){
+		$infoSub = "";
+	      }
+	      
+	      //полученные данные добавляем в базу
+	      $sub = $wpdb->insert(
+		  $wpdb->prefix . 'raportTableSub',
+		  array( 'name' => $name, 'doljnost' => $doljnost, 'mestoWork' => $workInstant, 'description' => $infoSub ),
+		  array( '%s', '%s', '%s', '%s' )
+	      );
+	
+	      //если все ок то сообщаем об этом
+	      if($sub){
+		echo $sub;
+	      }
+	      
+	      
+	    }
+	    
+	    
+	    // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
+	    wp_die();
 	 }
-	 
  	
 
 ?>
