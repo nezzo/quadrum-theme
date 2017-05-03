@@ -1908,8 +1908,7 @@ h3 .comment-link {
     display: block;
     margin-bottom: 20px;
     clear: both;
-    margin-top: 30px;
-}
+ }
 .meta-date .date {
     display: block;
     float: left;
@@ -2870,13 +2869,17 @@ input.error {
     font-size: 14px;
     font-weight: 600;
 }
-.content #sidebar {
+.content .widget_raport_news {
     display: block;
     width: 300px;
     float: right;
 }
 .content #sidebar.right {
     float: right;
+}
+.content .widget_raport_news.right {
+    float: right;
+    margin-bottom: 90px;
 }
 .content #sidebar.left {
     float: left;
@@ -3037,6 +3040,36 @@ input.error {
     right: 15px;
     font-size: 11px;
 }
+
+
+
+
+.widget_raport_news.widget {
+    display: block;
+    margin-bottom: 20px;
+}
+.widget_raport_news .widget p {
+    font-size: 14px;
+    color: #434343;
+}
+.widget_raport_news .widget > h3 {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    background: #2c3e50;
+    font-size: 18px;
+    font-weight: 600;
+}
+.widget_raport_news .widget .widget-top-b {
+    display: block;
+    color: #fff;
+    line-height: 24px;
+    right: 15px;
+    font-size: 11px;
+}
+
+
+
 .mini-sidebar .widget > form,
 .mini-sidebar .widget > ul,
 .mini-sidebar .widget > div {
@@ -3073,6 +3106,45 @@ input.error {
 #sidebar .widget > ul > li:first-child {
     margin-top: 0px;
 }
+
+
+
+
+
+.widget_raport_news .widget > dl,
+.widget_raport_news .widget > form,
+.widget_raport_news .widget > div {
+    display: block;
+    padding: 18px 20px;
+    background: #f5f5f5;
+}
+.widget_raport_news .widget > ul {
+    display: block;
+    padding: 18px 20px!important;
+    background: #f5f5f5;
+}
+.widget_raport_news .widget > form label {
+    display: none;
+}
+.mini-sidebar .widget .menu-quadrum-main-menu-container ul li,
+.mini-sidebar .widget > ul li,
+.widget_raport_news.widget .menu-quadrum-main-menu-container ul li,
+.widget_raport_news .widget > ul li {
+    margin-top: 12px;
+    line-height: 130%;
+}
+.mini-sidebar .widget .menu-quadrum-main-menu-container > ul > li:first-child,
+.mini-sidebar .widget > ul > li:first-child,
+.widget_raport_news .widget .menu-quadrum-main-menu-container > ul > li:first-child,
+.widget_raport_news .widget > ul > li:first-child {
+    margin-top: 0px;
+}
+
+
+
+
+
+
 body .sidebar-banner {
     text-align: center;
     background: transparent!important;

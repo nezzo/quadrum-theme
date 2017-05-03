@@ -1,4 +1,6 @@
 <?php
+ 
+
 	if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	define("THEME_NAME", 'quadrum');
 	define("THEME_FULL_NAME", 'Quadrum');
@@ -146,8 +148,7 @@
 	  wp_localize_script('raportAjaxJS', 'raportAjax_object', 
 		  array(
 			  'url' => admin_url('admin-ajax.php'),
-			  'nonce' => wp_create_nonce('add_object')
-		  )
+ 		  )
 	  );  
 
 	}
@@ -208,30 +209,40 @@
 	      $post_id = wp_insert_post($post_data);
 	      
  	      var_dump($post_id);
-	      
-	      
+ 	      
+ 	      
+ 	      //проверяем есть ли данные для отправки в доп. поле поста
+ 	      if(!empty($mas[12])){
+ 	      
+		//добавляем данные в произвольное поле поста
+		update_post_meta($post_id, 'raportTextarea', $mas[12]);
+ 	      }
+ 	      
+		      
 	      //wp_set_object_terms( 1050, 43, 'category' );
-	      
-	      //делаем проверку, что бы это была картинка
-	       if($file["type"] =="image/png" || $file["type"] =="image/jpg" || $file["type"] =="image/jpeg" || $file["type"] =="image/bmp"){
-		
-		//получаем картинку с поля и  клеем ее к посту только что созданому
-	       $attachment_id = media_handle_upload("raport_file_upload", $post_id );
-	       
-	       // новую картинку заносим в миниатюры
-	       set_post_thumbnail( $post_id, $attachment_id );
-	       
- 	       
-	       }
+	      if(!empty($file)){
+			      //делаем проверку, что бы это была картинка
+			       if($file["type"] =="image/png" || $file["type"] =="image/jpg" || $file["type"] =="image/jpeg" || $file["type"] =="image/bmp"){
+				
+				//получаем картинку с поля и  клеем ее к посту только что созданому
+			       $attachment_id = media_handle_upload("raport_file_upload", $post_id );
+			       
+			       // новую картинку заносим в миниатюры
+			       set_post_thumbnail( $post_id, $attachment_id );
+			       
+		 	       
+			       }
+	  		 }
+	  		 
+	  	 
 	      
 	      //если пост создан то призначаем ему категории
 	      if(!empty($post_id)){
 		//передаем параметры для добавление поста в категорию
 		do_action("wp_searcCategory",$post_id,$mas[1], $mas[2]);
 	      }
-	      
 	    
-		//проверка создавать нам или нет субъект
+	    //проверка создавать нам или нет субъект
 	      if(empty($mas[3]) || $mas[3] == "Субъект не найден!" ){
 	      
  	         //добавляем нового субъекта (внизу из-за бага)
@@ -240,9 +251,7 @@
 	      
 	      
 	    }
-	    
-	    // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
-	    wp_die();
+ 
 	 }
 	 
 	 
@@ -386,10 +395,7 @@
 	      
 	      
 	    }
-	    
-	    
-	    // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
-	    wp_die();
+ 
 	 }
 	 
 	 
@@ -400,6 +406,10 @@
 	  
 	  $tableCity = $wpdb->prefix.'raportTableCity';
 	  $tableInstant = $wpdb->prefix.'raportTableInstant';
+	  
+	  //устанавливаем категории по дефолту (никакой категории не пренадлежат)
+	  $getInstant = 0;
+	  $getCity = 0;
 	  
 	      //поиск категории в таблице города
  	       if(!empty($city)){
@@ -416,9 +426,7 @@
 			//после успешных проверок регистрируем переменную с id  категории
 			  $getCity =  $getCategoryCityId;
 			  
-			}else{
-			  $getCity = "";
-			} 
+			}
 			
 		      
 		    }
@@ -433,23 +441,20 @@
  	 
 		    //проверяем  ответ
 		    if(!empty($getCategoryId)){
-			$getCategoryCityId = $wpdb->get_var($wpdb->prepare("SELECT term_id FROM $tableInstant WHERE term_id = %d",$getCategoryId));
+			$getCategoryInstantId = $wpdb->get_var($wpdb->prepare("SELECT term_id FROM $tableInstant WHERE term_id = %d",$getCategoryId));
 			
 			//получаем id категории
-			if(!empty($getCategoryCityId)){
+			if(!empty($getCategoryInstantId)){
 			//после успешных проверок регистрируем переменную с id  категории
-			  $getInstant =  $getCategoryCityId;
+			  $getInstant =  $getCategoryInstantId;
 			  
-			}else{
-			  $getInstant = "";
-			} 
-			
+			} 			
 		      
 		    }
 		  
 		}
- 
-		 //формируем массив с категориями 
+		
+		//формируем массив с категориями 
 		$masCategory = array($getCity,$getInstant);
 		
 		#TODO возможно категорий которых нету лучше создавать автоматом, но лучше уточнить
@@ -457,10 +462,7 @@
 		//добавляем данный пост в категории
 		$masCategory = array_map('intval', $masCategory );
 		wp_set_object_terms($idPost, $masCategory, 'category' );
-	  
 	 
-	 // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
-	    wp_die();
 	 
 	 }
 

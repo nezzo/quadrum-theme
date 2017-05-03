@@ -28,7 +28,17 @@
 ?>
 
 	<!-- BEGIN #sidebar -->
-	<aside id="sidebar" class="<?php OT_sidebarClass(OT_page_ID());?>">
+	<aside id="sidebar" class="widget_raport_news <?php OT_sidebarClass(OT_page_ID());?>">
+		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar($sidebar) ) : ?>
+		<?php endif; ?>
+	<!-- END #sidebar -->
+	</aside>
+	
+	
+	
+	
+	<!-- BEGIN #sidebar -->
+	<aside  class="widget_raport_news <?php OT_sidebarClass(OT_page_ID());?>">
 		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar($sidebar) ) : ?>
 		<?php endif; ?>
 	<!-- END #sidebar -->

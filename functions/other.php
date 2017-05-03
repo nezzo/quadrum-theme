@@ -164,7 +164,10 @@ function ot_avarage_rating($id, $visitors = false) {
 		if(isset($ratingValues[1])){
 			$ratingPrecentage = (str_replace(",",".",$ratingValues[1]))*20;
 		}
+		if(!empty($ratingPrecentage)){
 		$totalRate[$i] = $ratingPrecentage;
+		}
+		
 
 		$i++;
 	} 
@@ -185,7 +188,10 @@ function ot_avarage_rating($id, $visitors = false) {
 
 	}
 
-	return array($avaragePrecentage,$avarageRate);
+	if(!empty($avaragePrecentage) || !empty($avarageRate)){
+		return array($avaragePrecentage,$avarageRate);
+	}
+	
 
 }
 

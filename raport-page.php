@@ -16,19 +16,83 @@ Template Name: Рапорт
 		require_once( ABSPATH . 'wp-admin/includes/media.php' );
 		
 		//получаем данные с полей
-		 $titleRaport = $_POST['titleRaport'];
-		 $cityRaptor = $_POST['cityRaptor'];
-		 $instantRaptor = $_POST['instantRaptor'];
-		 $subjectRaport = $_POST['subjectRaport'];
-		 $fioRaport = $_POST['fioRaport'];
-		 $doljnostRaport = $_POST['doljnostRaport'];
-		 $workRaport = $_POST['workRaport'];
-		 $sinkRaport = $_POST['sinkRaport'];
-		 $bodyRaport = $_POST['bodyRaport'];
-		 $raport_file_upload = $_FILES['raport_file_upload'];
-		 $podpisRaport = $_POST['podpisRaport'];
-		 $emailRaport = $_POST['emailRaport'];
-		 $anonInformRaport = $_POST['anonInformRaport'];
+		if(!empty($_POST['titleRaport'])){
+		      $titleRaport =  $_POST['titleRaport'];
+		 }else{
+		 	 $titleRaport = "";
+		 }
+		
+		if(!empty($_POST['cityRaptor'])){
+		      $cityRaptor = $_POST['cityRaptor'];
+		 }else{
+		 	$cityRaptor = "";
+		 }
+		 
+		 if(!empty($_POST['instantRaptor'])){
+		      $instantRaptor = $_POST['instantRaptor'];
+		 }else{
+		 	$instantRaptor = "";
+		 }
+		 
+		 if(!empty($_POST['subjectRaport'])){
+		      $subjectRaport = $_POST['subjectRaport'];
+		 }else{
+		 	$subjectRaport = "";
+		 }
+		 
+		 if(!empty($_POST['fioRaport'])){
+		      $fioRaport = $_POST['fioRaport'];
+		 }else{
+		 	$fioRaport = "";
+		 }
+		 
+		 if(!empty($_POST['doljnostRaport'])){
+		     $doljnostRaport = $_POST['doljnostRaport'];
+		 }else{
+		 	$doljnostRaport = "";
+		 }
+		 
+		 if(!empty($_POST['workRaport'])){
+		      $workRaport = $_POST['workRaport'];
+		 }else{
+		 	$workRaport = "";
+		 }
+		 
+		 if(!empty($_POST['sinkRaport'])){
+		      $sinkRaport = $_POST['sinkRaport'];
+		 }else{
+		 	$sinkRaport = "";
+		 }
+		 
+		 if(!empty($_POST['bodyRaport'])){
+		      $bodyRaport = $_POST['bodyRaport'];
+		 }else{
+		 	$bodyRaport = "";
+		 }
+		 
+		 if(!empty($_FILES['raport_file_upload'])){
+		      $raport_file_upload = $_FILES['raport_file_upload'];
+		 }else{
+		 	 $raport_file_upload = "";
+		 }
+		 
+		 if(!empty($_POST['podpisRaport'])){
+		      $podpisRaport = $_POST['podpisRaport'];
+		 }else{
+		 	$podpisRaport = "";
+		 }
+		 
+		 if(!empty($_POST['emailRaport'])){
+		      $emailRaport = $_POST['emailRaport'];
+		 }else{
+		 	$emailRaport = "";
+		 }
+		 
+		 if(!empty($_POST['anonInformRaport'])){
+		      $anonInformRaport = $_POST['anonInformRaport'];
+		 }else{
+		 	$anonInformRaport = "";
+		 }
 		 
 		 //формируем массив для отправки
 		 $mas = array($titleRaport,$cityRaptor,$instantRaptor,$subjectRaport,
