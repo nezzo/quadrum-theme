@@ -84,6 +84,9 @@
  	add_action('wp_getRaportCategory','getRaportCategory',1,1);
  	//регистрируем хук для получения списка имен и ЧПУ
  	add_action('wp_getNameSlugCategory', 'getNameSlugCategory',1,1);
+ 	
+ 	//регистрируем хук на проверку существования категории
+ 	add_action('wp_searcCategory','searcCategory',1,3);
  	//хук по добавлению нового объекта
  	add_action('wp_newSub','newSub',1,4);
  	 
@@ -152,42 +155,38 @@
 	
 	//создаем новый пост из рапорта
 	function raport($mas){
-	#TODO по поводу субъекта надо поставить проверку если субъект это массив то заносим в базу как новую личность а имя передаем в текст 
-	#рапорта если это не массив то просто передаем в текст. Второй момент, насчет категорий. Полученную категорию (имя) ищем в 
-	#базе  если есть получаем ид и отправляем в метод по созданию постов. Если не нашло  вернуло FALSE то нужно как то придумать 
-	#что бы отправляло пост ново созданный в катеорию "Без рубрики" а в тексте поста указать мол НЕТУ КАТЕГОРИИ : имя_категории  
-	#это сделать для двух категорий. Надо узнать как редактировать по почте можно или высылать доступы какие то хз. И насчет инфы для 
+	 global $wpdb;
+	# Надо узнать как редактировать по почте можно или высылать доступы какие то хз. И насчет инфы для 
 	#админа мета_бокс если память не изменяет. Надо как то впихнуть и сюда данные и привязать к посту, добавление инфы в доп поле и 
-	#картинку можно использовать update_post или как то так куда вставлять id  только что созданого поста 
-	#(послу удачного создание поста) будет возвращаться id поста который мы будем вставлять на update  и подгружать картинку и мета_бокс
+	# и мета_бокс
 	#Надо разобраться с условием на прием субъекта, какой то баг!!!!!!
 	
 	
 	    //по ajax получаем массив данных для разбора
  	    if(!empty($mas)){
  	    
+ 	     
  	    //картинка 
  	    $file = $mas[9];
  	    
+ 	    $subName = $mas[3];
+ 	    
  	   //проверяем есть ли субъект и какое нам имя ставить
- 	    if(!empty($mas[3]) && $mas[3] != "Субъект не найден!" ){
- 		$subName = $mas[3];
- 	    }else{
-	      //проверяем заполнено ли поле ФИО
+ 	    if(empty($mas[3]) || $mas[3] == "Субъект не найден!" ){
+ 		//проверяем заполнено ли поле ФИО
 		  if(!empty($mas[4])){
 		  //регистрируем нового субъекта
-		    do_action('wp_newSub',$mas[4],$mas[5],$mas[6],$mas[7]);
-		    echo "number 2";
-		    $subName = var_dump($mas[4]);
+		    $subName = $mas[4];
+		  }else{
+		    $subName = " ";
 		  }
-	 }
+		  
+		 
+		  
+ 	    } 
  	    
- 	    
- 	    
-	     
- 
-		
- 	       $content = "
+ 	    //создаем текст сообщения в рапорте
+ 	     $content = "
 		Место: $mas[1]
 		$mas[2]
 		
@@ -203,15 +202,15 @@
 		'post_title'    => wp_strip_all_tags($mas[0]),
 		'post_content'  => $content,
 		'post_status'   => 'pending',
-		//'post_author'   => 1,
-		//'post_category' => array( 8,39 ) #TODO надо создать будет функцию которая будет искать по имени и возвращать ид категории если нету такой категории то без рубрики
-	      );
+  	      );
 
 	      //Вставляем запись в базу данных
 	      $post_id = wp_insert_post($post_data);
 	      
-	      echo "post";
-	      var_dump($post_id);
+ 	      var_dump($post_id);
+	      
+	      
+	      //wp_set_object_terms( 1050, 43, 'category' );
 	      
 	      //делаем проверку, что бы это была картинка
 	       if($file["type"] =="image/png" || $file["type"] =="image/jpg" || $file["type"] =="image/jpeg" || $file["type"] =="image/bmp"){
@@ -225,7 +224,20 @@
  	       
 	       }
 	      
-	      //echo $post_id;
+	      //если пост создан то призначаем ему категории
+	      if(!empty($post_id)){
+		//передаем параметры для добавление поста в категорию
+		do_action("wp_searcCategory",$post_id,$mas[1], $mas[2]);
+	      }
+	      
+	    
+		//проверка создавать нам или нет субъект
+	      if(empty($mas[3]) || $mas[3] == "Субъект не найден!" ){
+	      
+ 	         //добавляем нового субъекта (внизу из-за бага)
+		do_action('wp_newSub',$mas[4],$mas[5],$mas[6],$mas[7]);
+	      }
+	      
 	      
 	    }
 	    
@@ -379,6 +391,79 @@
 	    // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
 	    wp_die();
 	 }
+	 
+	 
+	 
+	 //проверяем существует ли такая категория
+	 function searcCategory($idPost,$city, $instant){
+	 global $wpdb;
+	  
+	  $tableCity = $wpdb->prefix.'raportTableCity';
+	  $tableInstant = $wpdb->prefix.'raportTableInstant';
+	  
+	      //поиск категории в таблице города
+ 	       if(!empty($city)){
+		  
+		    $getCategoryId = $wpdb->get_var($wpdb->prepare("SELECT term_id FROM $wpdb->terms WHERE name = %s",$city));
+	  
+ 	 
+		    //проверяем  ответ
+		    if(!empty($getCategoryId)){
+			$getCategoryCityId = $wpdb->get_var($wpdb->prepare("SELECT term_id FROM $tableCity WHERE term_id = %d",$getCategoryId));
+			
+			//получаем id категории
+			if(!empty($getCategoryCityId)){
+			//после успешных проверок регистрируем переменную с id  категории
+			  $getCity =  $getCategoryCityId;
+			  
+			}else{
+			  $getCity = "";
+			} 
+			
+		      
+		    }
+		  
+		}
+		
+		 //поиск категории в таблице инстанции
+ 		if(!empty($instant)){
+		  
+		  $getCategoryId = $wpdb->get_var($wpdb->prepare("SELECT term_id FROM $wpdb->terms WHERE name = %s",$instant));
+	  
+ 	 
+		    //проверяем  ответ
+		    if(!empty($getCategoryId)){
+			$getCategoryCityId = $wpdb->get_var($wpdb->prepare("SELECT term_id FROM $tableInstant WHERE term_id = %d",$getCategoryId));
+			
+			//получаем id категории
+			if(!empty($getCategoryCityId)){
+			//после успешных проверок регистрируем переменную с id  категории
+			  $getInstant =  $getCategoryCityId;
+			  
+			}else{
+			  $getInstant = "";
+			} 
+			
+		      
+		    }
+		  
+		}
+ 
+		 //формируем массив с категориями 
+		$masCategory = array($getCity,$getInstant);
+		
+		#TODO возможно категорий которых нету лучше создавать автоматом, но лучше уточнить
+		
+		//добавляем данный пост в категории
+		$masCategory = array_map('intval', $masCategory );
+		wp_set_object_terms($idPost, $masCategory, 'category' );
+	  
+	 
+	 // выход нужен для того, чтобы в ответе не было ничего лишнего, только то что возвращает функция
+	    wp_die();
+	 
+	 }
+
  	
 
 ?>
